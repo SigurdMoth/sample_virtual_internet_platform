@@ -1,0 +1,2 @@
+dk/vip/session/SessionApplicationTests.java
+ dk.vip.session.SessionApplicationTests

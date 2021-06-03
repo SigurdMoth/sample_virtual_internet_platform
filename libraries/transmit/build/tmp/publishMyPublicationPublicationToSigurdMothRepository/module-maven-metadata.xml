@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>dk.vip</groupId>
+  <artifactId>transmit</artifactId>
+  <versioning>
+    <latest>0.0.1g</latest>
+    <release>0.0.1g</release>
+    <versions>
+      <version>0.0.1a</version>
+      <version>0.0.1b</version>
+      <version>0.0.1c</version>
+      <version>0.0.1d</version>
+      <version>0.0.1e</version>
+      <version>0.0.1f</version>
+      <version>0.0.1g</version>
+    </versions>
+    <lastUpdated>20201109214603</lastUpdated>
+  </versioning>
+</metadata>

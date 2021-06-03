@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dk.vip",
+    "module": "protocolbroker",
+    "version": "0.0.1h",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.6.1",
+      "buildId": "6tsrnvl7hbarfhoybe4yjzgyqq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "dk.vip",
+          "module": "wrap",
+          "version": {
+            "requires": "0.0.1g"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "expression",
+          "version": {
+            "requires": "0.0.1n"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "transmit",
+          "version": {
+            "requires": "0.0.1h"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "protocolbroker-0.0.1h.jar",
+          "url": "protocolbroker-0.0.1h.jar",
+          "size": 16556057,
+          "sha512": "837afdaca42efb4d660e023148c5128a65843cd734e89ae4babda42e170d03521400d46f38b253a5100bce17baf00e8f4e208cf9cce99752335debef96e8e783",
+          "sha256": "efdcc376b3d6afa6f0ae07d4eab6ceccf3501f6eebc55578f12bde7a3c9ac809",
+          "sha1": "03f9797ab4e5bbb39b2bee482229226cefb2efed",
+          "md5": "032c4bd4b87f77042ad84f28f5f7b4a5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web"
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson"
+        },
+        {
+          "group": "dk.vip",
+          "module": "wrap",
+          "version": {
+            "requires": "0.0.1g"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "expression",
+          "version": {
+            "requires": "0.0.1n"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "transmit",
+          "version": {
+            "requires": "0.0.1h"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "protocolbroker-0.0.1h.jar",
+          "url": "protocolbroker-0.0.1h.jar",
+          "size": 16556057,
+          "sha512": "837afdaca42efb4d660e023148c5128a65843cd734e89ae4babda42e170d03521400d46f38b253a5100bce17baf00e8f4e208cf9cce99752335debef96e8e783",
+          "sha256": "efdcc376b3d6afa6f0ae07d4eab6ceccf3501f6eebc55578f12bde7a3c9ac809",
+          "sha1": "03f9797ab4e5bbb39b2bee482229226cefb2efed",
+          "md5": "032c4bd4b87f77042ad84f28f5f7b4a5"
+        }
+      ]
+    }
+  ]
+}

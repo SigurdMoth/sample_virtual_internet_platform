@@ -1,0 +1,15 @@
+image: java:11
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - chmod +x mvnw
+# ./Gradlew instead of gradle?
+build:
+  stage: build
+  script: ./mvnw package 
+  artifacts:
+    paths:
+      - target/demo-0.0.1-SNAPSHOT.jar

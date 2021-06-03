@@ -1,0 +1,8 @@
+./gradlew build
+./gradlew publish
+# Hvis der bruges Springboot dependency injection (andre filer har dependencies på den der bygges)
+./gradlew clean bootJar jar publish
+
+#Spring
+./gradlew bootRun
+./gradlew bootJar

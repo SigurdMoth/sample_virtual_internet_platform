@@ -1,0 +1,11 @@
+dk/vip/wrap/Wrap.java
+ dk.vip.wrap.Wrap
+ dk.vip.wrap.Wrap$Parser
+dk/vip/wrap/MetaCollection.java
+ dk.vip.wrap.MetaCollection
+dk/vip/wrap/MetaBundle.java
+ dk.vip.wrap.MetaBundle
+dk/vip/wrap/Bundlable.java
+ dk.vip.wrap.Bundlable
+dk/vip/wrap/WrapLibrary.java
+ dk.vip.wrap.WrapLibrary

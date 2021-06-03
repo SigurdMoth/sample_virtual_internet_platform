@@ -1,0 +1,15 @@
+- ./gradlew bootrun client, session, protocolbroker, protocol
+
+- set user -n anotherUsername
+  - Udpej username
+
+- set source -v 0 -n 0
+  - marker addresse 
+- set destination -v 9 -n 1
+  - marker addresse
+
+- http post -u http://url.com -m "this is a message."
+  - Udpej 200 OK
+
+- http get -u http://url.com
+  - udpej response og message.

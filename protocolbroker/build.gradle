@@ -1,0 +1,74 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id('maven-publish')
+    id "net.linguica.maven-settings" version "0.5"
+}
+
+group = 'dk.vip'
+version = '0.0.1h'
+sourceCompatibility = '11'
+
+publishing {
+    	    publications { 
+                library(MavenPublication) {
+                    from components.java
+                }
+            }
+    repositories {
+        maven {
+                url "https://gitlab.sdu.dk/api/v4/projects/1178/packages/maven"
+                credentials(HttpHeaderCredentials) {
+                    name = "Private-Token"
+                    value = gitLabPrivateToken // the variable resides in ~/.gradle/gradle.properties in the home folder on any given PC.
+                }
+                authentication {
+                    header(HttpHeaderAuthentication)
+                }
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://gitlab.sdu.dk/api/v4/projects/1178/packages/maven"
+        name "GitLab"
+        credentials(HttpHeaderCredentials) {
+            name = 'Private-Token'
+            value = gitLabPrivateToken
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+    manifest { 
+    attributes "Main-Class": "dk.vip.protocolbroker.ProtocolbrokerApplication"
+  }
+
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.google.code.gson:gson'
+	compile(group: 'dk.vip', name: 'wrap', version: '0.0.1g')
+	compile(group: 'dk.vip', name: 'expression', version: '0.0.1n')
+	compile(group: 'dk.vip', name: 'transmit', version: '0.0.1h')
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}

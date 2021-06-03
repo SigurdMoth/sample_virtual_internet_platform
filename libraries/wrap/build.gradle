@@ -1,0 +1,57 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+    id('maven-publish')
+    id "net.linguica.maven-settings" version "0.5"
+}
+
+group = 'dk.vip'
+version = '0.0.1l'
+sourceCompatibility = '11'
+
+publishing {
+    	    publications { 
+                mavenJava(MavenPublication){
+                    artifact bootJar
+                }
+               // library(MavenPublication) {
+               //     from components.java
+                //}
+            }
+    repositories {
+        maven {
+                url "https://gitlab.sdu.dk/api/v4/projects/1178/packages/maven"
+                credentials(HttpHeaderCredentials) {
+                    name = "Private-Token"
+                    value = gitLabPrivateToken // the variable resides in ~/.gradle/gradle.properties in the home folder on any given PC.
+                }
+                authentication {
+                    header(HttpHeaderAuthentication)
+                }
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://gitlab.sdu.dk/api/v4/projects/1178/packages/maven"
+        name "GitLab"
+        credentials(HttpHeaderCredentials) {
+            name = 'Private-Token'
+            value = gitLabPrivateToken
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson'
+	compile(group: 'dk.vip', name: 'expression', version: '0.0.1n')
+}
+
+test {
+	useJUnitPlatform()
+}

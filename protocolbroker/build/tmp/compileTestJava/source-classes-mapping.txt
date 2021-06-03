@@ -1,0 +1,2 @@
+dk/vip/protocolbroker/ProtocolbrokerApplicationTests.java
+ dk.vip.protocolbroker.ProtocolbrokerApplicationTests

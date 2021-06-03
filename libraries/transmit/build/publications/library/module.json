@@ -1,0 +1,93 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dk.vip",
+    "module": "transmit",
+    "version": "0.0.1h",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.6.1",
+      "buildId": "oolnhxwyirfzpk2ma7nortvioi"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "wrap",
+          "version": {
+            "requires": "0.0.1g"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "transmit-0.0.1h.jar",
+          "url": "transmit-0.0.1h.jar",
+          "size": 2563,
+          "sha512": "25e0f84149b247afc1f75f899e9bf2bc143b4dbfbd8d0b8bb06d32d312f207dd4a6be2a533d948f356f7e6ee0b748d15e3f38608df4a428e286085b48e0be16e",
+          "sha256": "be488a66b442d3e95ddc1787875f0cb5961ec4779bcb9bc1ece225972dac2ca3",
+          "sha1": "0f59066edae7cb55e51a00907d928fb12868cbed",
+          "md5": "282f1ded5cf0a637bbba3d19999ae965"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.8.6"
+          }
+        },
+        {
+          "group": "dk.vip",
+          "module": "wrap",
+          "version": {
+            "requires": "0.0.1g"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "transmit-0.0.1h.jar",
+          "url": "transmit-0.0.1h.jar",
+          "size": 2563,
+          "sha512": "25e0f84149b247afc1f75f899e9bf2bc143b4dbfbd8d0b8bb06d32d312f207dd4a6be2a533d948f356f7e6ee0b748d15e3f38608df4a428e286085b48e0be16e",
+          "sha256": "be488a66b442d3e95ddc1787875f0cb5961ec4779bcb9bc1ece225972dac2ca3",
+          "sha1": "0f59066edae7cb55e51a00907d928fb12868cbed",
+          "md5": "282f1ded5cf0a637bbba3d19999ae965"
+        }
+      ]
+    }
+  ]
+}

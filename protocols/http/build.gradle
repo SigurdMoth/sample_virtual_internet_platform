@@ -1,0 +1,43 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id('maven-publish')
+    id "net.linguica.maven-settings" version "0.5"
+}
+
+group = 'dk.vip.protocols'
+version = '0.0.1a'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://gitlab.sdu.dk/api/v4/projects/1178/packages/maven"
+        name "GitLab"
+        credentials(HttpHeaderCredentials) {
+            name = 'Private-Token'
+            value = gitLabPrivateToken
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.google.code.gson:gson'
+	compile(group: 'dk.vip', name: 'wrap', version: '0.0.1l')
+	compile(group: 'dk.vip', name: 'protocolbroker', version: '0.0.1h')
+	compile(group: 'dk.vip', name: 'transmit', version: '0.0.1h')
+    compile(group: 'dk.vip', name: 'expression', version: '0.0.1n')
+    compile(group: 'dk.vip', name: 'network', version: '0.0.1c')
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
